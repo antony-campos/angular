@@ -1,0 +1,15 @@
+<section>
+@if (isLoggedIn) {
+    <p>Bienvenido, {{ username }}!</p>
+    <img (click)="greet()" alt="User Profile" src="https://www.pngall.com/wp-content/uploads/5/User-Profile-PNG-Picture.png" width="100">
+} @else {
+    <p>Por favor, inicia sesión.</p>
+    <button (click)="isLoggedIn = true">Iniciar Sesión</button>
+}
+<app-games (addFavoriteEvent)="getFavorite($event)" [username]="username"></app-games>
+
+@if (favGame !== '') {
+    <p> Tu juego favorito es: {{ favGame }}</p>
+}
+</section>
+

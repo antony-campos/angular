@@ -1,12 +1,15 @@
-import { Component, signal } from '@angular/core';
+import { Component} from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
+import { Navbar } from "./components/shared/navbar/navbar";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.html',
-  styleUrl: './app.css'
+  standalone: true,
+  imports: [CommonModule, RouterOutlet, Navbar],
+  templateUrl: './app.html', 
+  styles: ``,
 })
 export class App {
-  protected readonly title = signal('angular-21-app');
+  city = 'Lima';
 }
