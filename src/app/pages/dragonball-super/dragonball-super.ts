@@ -1,5 +1,5 @@
 import { Component, signal } from '@angular/core';
-
+import { CharacterListComponent } from '../../components/dragonball/character-list/character-list';
 interface Character {
     id: number;
     name: string;
@@ -8,6 +8,7 @@ interface Character {
 
 @Component({
   templateUrl: './dragonball-super.html',
+  imports: [CharacterListComponent]
 
 })
 export class DragonballSuper {
