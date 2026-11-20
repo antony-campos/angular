@@ -2,6 +2,8 @@
 <hr />
 <section class="row">
   <div class="col-12 col-sm-6">
+
+
     <h3>Agregar: {{name()}}</h3>
         <input type="text" 
         class="form-control" 
@@ -24,14 +26,14 @@
         <button (click)="addCharacter()" class="btn btn-primary mt-2">   
             Agregar
         </button>
+
+        
   </div>
 
   <div class="col-12 col-sm-6">
     <dragonball-character-list 
     listName="Listado de personajes"
     [characters]="characters()"/>
-
-    
 
   </div>
 </section>
